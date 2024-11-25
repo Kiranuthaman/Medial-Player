@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { delteHistoryVideoApi, getAllVideoHistory } from '../services/allApi'
-// import { ToastContainer,toast } from 'react-toastify'
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer,toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -32,7 +32,7 @@ function Watchhistory() {
     }
     else{
         
-      alert('Something Went Wrong')
+      toast.error('Something Went Wrong')
     }
 
     
@@ -81,7 +81,7 @@ function Watchhistory() {
       </div>
         :
         <h3 className='text-center text-warning'>No Watch History........</h3>}
-         {/* <ToastContainer  position='top-center' theme='colored' autoClose={2000}/> */}
+         <ToastContainer  position='top-center' theme='colored' autoClose={2000}/>
     </>
   )
 }
